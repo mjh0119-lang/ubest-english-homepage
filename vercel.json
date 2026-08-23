@@ -1,4 +1,6 @@
 {
   "buildCommand": "node build.mjs",
+  "installCommand": "echo no install needed",
   "outputDirectory": "dist"
 }
+

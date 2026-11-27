@@ -7,7 +7,8 @@
     { "src": "assets/**", "use": "@vercel/static" },
     { "src": "robots.txt", "use": "@vercel/static" },
     { "src": "sitemap.xml", "use": "@vercel/static" },
-    { "src": "naver626408e8e719d5b15172c439d9b4bc16.html", "use": "@vercel/static" }
+    { "src": "naver626408e8e719d5b15172c439d9b4bc16.html", "use": "@vercel/static" },
+    { "src": "google619de16c96f8c387.html", "use": "@vercel/static" }
   ],
   "routes": [
     { "src": "/assets/(.*)", "dest": "/assets/$1" },
@@ -16,6 +17,7 @@
     { "src": "/robots.txt", "dest": "/robots.txt" },
     { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
     { "src": "/naver626408e8e719d5b15172c439d9b4bc16.html", "dest": "/naver626408e8e719d5b15172c439d9b4bc16.html" },
+    { "src": "/google619de16c96f8c387.html", "dest": "/google619de16c96f8c387.html" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }

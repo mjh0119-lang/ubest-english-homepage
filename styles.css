@@ -292,6 +292,11 @@ h3 {
   box-shadow: var(--shadow);
 }
 
+.hero-image img {
+  /* 세로형 프로필 사진이라 위쪽(얼굴)을 기준으로 잘라 얼굴이 잘리지 않게 합니다. */
+  object-position: center top;
+}
+
 .hero-image figcaption {
   position: absolute;
   left: 18px;

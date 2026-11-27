@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ubest-english-homepage.vercel.app/sitemap.xml

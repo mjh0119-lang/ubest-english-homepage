@@ -10,7 +10,7 @@ await rm(dist, { recursive: true, force: true });
 await mkdir(serverDir, { recursive: true });
 await cp(path.join(root, "assets"), path.join(dist, "assets"), { recursive: true });
 
-for (const file of ["index.html", "styles.css", "script.js"]) {
+for (const file of ["index.html", "styles.css", "script.js", "robots.txt", "sitemap.xml"]) {
   await cp(path.join(root, file), path.join(dist, file));
 }
 

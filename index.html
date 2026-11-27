@@ -13,6 +13,10 @@
     <meta property="og:description" content="1개월 완성 파닉스 & 초4~수능 단어·듣기 급수시험제도! 흔들리지 않는 영어 실력의 완성." />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ko_KR" />
+    <meta property="og:url" content="https://ubest-english-homepage.vercel.app/" />
+    <meta property="og:image" content="https://ubest-english-homepage.vercel.app/assets/director-hwang.jpg" />
+    <meta property="og:image:alt" content="유베스트영어 황미정 원장" />
+    <meta property="og:site_name" content="유베스트영어" />
     <link rel="preload" href="assets/director-hwang.jpg" as="image" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -25,6 +29,7 @@
       <nav class="desktop-nav" aria-label="주요 메뉴">
         <a href="#about">학원 소개</a>
         <a href="#programs">특화 프로그램</a>
+        <a href="#director">원장 소개</a>
         <a href="#curriculum">커리큘럼</a>
         <a href="#system">학습 관리</a>
         <a href="#faq">FAQ</a>
@@ -37,6 +42,7 @@
       <div class="mobile-menu" data-mobile-menu>
         <a href="#about">학원 소개</a>
         <a href="#programs">특화 프로그램</a>
+        <a href="#director">원장 소개</a>
         <a href="#curriculum">커리큘럼</a>
         <a href="#system">학습 관리</a>
         <a href="#faq">FAQ</a>
@@ -65,10 +71,15 @@
             <div><dt>4주</dt><dd>파닉스 집중 완성</dd></div>
           </dl>
         </div>
-        <figure class="hero-image">
-          <!-- 이미지 1: 실제 원장님 프로필 사진. 새로 받은 원장님 사진(director-hwang.jpg)을 사용. -->
-          <img src="assets/director-hwang.jpg" alt="유베스트영어 황미정 원장" />
-          <figcaption>황미정 원장 직접 지도</figcaption>
+        <figure class="hero-figure">
+          <div class="hero-photo">
+            <!-- 이미지 1: 실제 원장님 프로필 사진. 새로 받은 원장님 사진(director-hwang.jpg)을 사용. -->
+            <img src="assets/director-hwang.jpg" alt="유베스트영어 황미정 원장 프로필 사진" />
+          </div>
+          <figcaption class="hero-caption">
+            <span class="hero-caption-name">황미정 원장</span>
+            <span class="hero-caption-line">20년 경력 · 초·중등 영어 100% 직강</span>
+          </figcaption>
         </figure>
       </section>
 
@@ -131,14 +142,21 @@
         </figure>
       </section>
 
-      <section class="section director-section">
-        <figure class="image-card">
-          <!-- 이미지 3: 단어·듣기 급수제 및 1:1 지도 사진. -->
-          <img src="assets/system.png" alt="유베스트영어 단어 듣기 급수제와 1대1 첨삭 지도" />
-        </figure>
+      <section class="section director-section" id="director">
+        <div class="director-media">
+          <figure class="director-photo">
+            <!-- 이미지 3: 원장님 프로필 사진. 인물 중심으로 정사각 프레임에 담습니다. -->
+            <img src="assets/director-hwang.jpg" alt="유베스트영어 황미정 원장" />
+          </figure>
+          <p class="director-media-caption"><strong>황미정</strong> 유베스트영어 대표 원장</p>
+        </div>
         <div class="director-copy">
           <span class="eyebrow">Director</span>
-          <h2>20년 한결같은 책임감으로 아이의 실력을 완성하는 황미정 원장</h2>
+          <h2>20년 한결같은 책임감으로<br />아이의 실력을 완성하는 황미정 원장</h2>
+          <p class="director-lead">
+            20년 동안 초·중등 영어를 지도해 온 경험을 그대로 담아, 우리 아이가 어디서 막혔는지부터 다시 세웁니다.
+            대형학원이 아닌 작은 교실에서 원장이 직접 가르쳐 온 시간이 유베스트영어의 가장 큰 차이입니다.
+          </p>
           <ul class="check-list">
             <li><strong>성함</strong> 황미정 원장</li>
             <li><strong>경력</strong> 영어학원 20년 운영 및 초·중등 영어 교육 전문가</li>
@@ -148,6 +166,63 @@
           <blockquote>
             영어는 단순히 성적만을 위한 암기 과목이 아닙니다. 아이들이 스스로 성취감을 느끼며 더 넓은 세상과 자신 있게 소통할 수 있도록, 20년의 모든 노하우를 쏟아 한 명 한 명 정성을 다해 지도합니다.
           </blockquote>
+          <a class="director-more" href="#story">원장이 직접 말하는 교육철학 영상 보기 <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+
+      <section class="section story-section" id="story">
+        <div class="story-head">
+          <span class="eyebrow">Director&rsquo;s Voice</span>
+          <h2>영어가 막힐 땐, 자신감부터</h2>
+          <p>원장이 직접 영상으로 전하는 유베스트영어의 교육철학을 유튜브 쇼츠로 만나 보세요.</p>
+        </div>
+        <div class="story-grid">
+          <figure class="video-card">
+            <div class="video-frame">
+              <iframe
+                src="https://www.youtube.com/embed/0d3I9OVBTI8?rel=0"
+                title="유베스트영어 황미정 SUNNY 원장의 교육철학"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <figcaption>
+              <strong>유베스트영어 황미정 SUNNY 원장의 교육철학</strong>
+              <span>유튜브 쇼츠</span>
+            </figcaption>
+          </figure>
+          <div class="story-copy">
+            <p class="story-quote">&ldquo;영어가 막힐 땐 자신감부터. 진단과 루틴으로 아이의 성장을 이끕니다.&rdquo;</p>
+            <ul class="story-points">
+              <li>
+                <span>01</span>
+                <div>
+                  <strong>자신감</strong>
+                  <p>틀려도 괜찮은 소수정예 교실에서 먼저 말해 보는 경험이, 영어에 대한 두려움을 자신감으로 바꿉니다.</p>
+                </div>
+              </li>
+              <li>
+                <span>02</span>
+                <div>
+                  <strong>진단</strong>
+                  <p>지금 어디서 막혔는지 정확히 진단하고, 그 지점부터 다시 세우는 개별 학습 설계로 시작합니다.</p>
+                </div>
+              </li>
+              <li>
+                <span>03</span>
+                <div>
+                  <strong>루틴</strong>
+                  <p>파닉스 4주, 단어·듣기 급수제의 누적 복습처럼 매일 확인되는 루틴이 실력을 오래 남깁니다.</p>
+                </div>
+              </li>
+            </ul>
+            <div class="story-actions">
+              <a class="button secondary" href="https://youtube.com/shorts/0d3I9OVBTI8" target="_blank" rel="noreferrer">쇼츠로 바로 보기</a>
+              <a class="button ghost" href="https://www.youtube.com/@bestwhale" target="_blank" rel="noreferrer">유튜브 채널 전체 보기</a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -159,7 +234,7 @@
         <div class="curriculum-grid">
           <article>
             <h3>초등부</h3>
-            <p>기초 다지기 & 영어 자신감 도약</p>
+            <p>기초 다지기 &amp; 영어 자신감 도약</p>
             <ul>
               <li>파닉스 1개월 완성 및 기초 리딩·스피킹 발음 훈련</li>
               <li>초등 필수 교과 어휘 급수제 적용과 기초 문법 체계 정립</li>
@@ -168,7 +243,7 @@
           </article>
           <article>
             <h3>중등부</h3>
-            <p>내신 1등급 완성 & 수능 실전력 구축</p>
+            <p>내신 1등급 완성 &amp; 수능 실전력 구축</p>
             <ul>
               <li>세종 관내 중학교별 교과서 분석과 서술형·수행평가 1:1 첨삭</li>
               <li>중등 핵심 영문법 총정리 및 고난도 구문 독해 마스터</li>
@@ -195,8 +270,8 @@
         </div>
         <div class="trust-panel">
           <figure>
-            <!-- 이미지 5: 정기 상담 및 학습 리포트 사진. -->
-            <img src="assets/consultation.png" alt="유베스트영어 학부모 상담과 학습 리포트" />
+            <!-- 이미지 5: 단어·듣기 급수제 및 1:1 지도 사진. -->
+            <img src="assets/system.png" alt="유베스트영어 단어·듣기 급수제와 1대1 첨삭 지도" />
           </figure>
           <div>
             <span class="eyebrow">Trust</span>
@@ -224,7 +299,7 @@
 
       <section class="section contact-section" id="contact">
         <div class="contact-info">
-          <span class="eyebrow">Location & Contact</span>
+          <span class="eyebrow">Location &amp; Contact</span>
           <h2>상담 예약 및 오시는 길</h2>
           <dl>
             <div><dt>학원명</dt><dd>유베스트영어</dd></div>
@@ -237,6 +312,11 @@
             <a href="https://blog.naver.com/whaleenglishsj" target="_blank" rel="noreferrer">네이버 블로그</a>
             <a href="https://www.youtube.com/@bestwhale" target="_blank" rel="noreferrer">유튜브 채널</a>
           </div>
+          <figure class="contact-photo">
+            <!-- 이미지 6: 정기 상담 및 학습 리포트 사진. -->
+            <img src="assets/consultation.png" alt="유베스트영어 학부모 상담과 학습 리포트" />
+            <figcaption>진도와 급수 달성 현황을 담은 학습 리포트로 정기 상담을 진행합니다.</figcaption>
+          </figure>
         </div>
         <form class="contact-form" name="consultation" action="mailto:01032922330@ubest.local" method="post" enctype="text/plain">
           <h3>빠른 상담 신청</h3>

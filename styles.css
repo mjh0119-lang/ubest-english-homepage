@@ -896,6 +896,19 @@ details p {
   display: none;
 }
 
+/* 메뉴가 7개로 늘어 좁은 화면에서 겹치지 않도록 간격·글자를 줄입니다. */
+@media (max-width: 1120px) and (min-width: 981px) {
+  .desktop-nav {
+    gap: 12px;
+    font-size: 14px;
+  }
+
+  .header-cta {
+    padding: 0 14px;
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 980px) {
   .site-header {
     grid-template-columns: auto 1fr auto;

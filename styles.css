@@ -385,7 +385,6 @@ h3 {
 }
 
 .split-section,
-.director-section,
 .contact-section,
 .trust-panel {
   display: grid;
@@ -395,12 +394,6 @@ h3 {
 
 .split-section {
   grid-template-columns: 1fr 0.9fr;
-}
-
-.director-section {
-  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1fr);
-  align-items: start;
-  gap: clamp(32px, 4.5vw, 60px);
 }
 
 .program-list {
@@ -437,7 +430,15 @@ h3 {
   margin-top: 24px;
 }
 
+/* 원장 소개: 사진 · 소개 글 · 교육철학 쇼츠를 한 화면에 나란히 놓습니다. */
 .director-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.16fr) minmax(0, 0.78fr);
+  grid-template-areas:
+    "photo copy video"
+    "voice voice voice";
+  align-items: start;
+  gap: clamp(26px, 3.2vw, 44px);
   max-width: none;
   padding-left: max(22px, calc((100vw - 1180px) / 2));
   padding-right: max(22px, calc((100vw - 1180px) / 2));
@@ -445,9 +446,88 @@ h3 {
 }
 
 .director-media {
+  grid-area: photo;
   display: grid;
   gap: 14px;
   align-content: start;
+}
+
+.director-copy {
+  grid-area: copy;
+}
+
+.director-copy h2 {
+  font-size: clamp(24px, 2.4vw, 32px);
+}
+
+.director-section .video-card {
+  grid-area: video;
+  align-self: start;
+}
+
+.director-voice {
+  grid-area: voice;
+  display: grid;
+  gap: 18px;
+  margin-top: clamp(4px, 1.4vw, 16px);
+}
+
+.director-voice-quote {
+  margin: 0;
+  padding: 20px 26px;
+  border-left: 5px solid var(--blue);
+  border-radius: 14px;
+  background: var(--white);
+  color: var(--navy);
+  font-size: clamp(17px, 1.5vw, 21px);
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.director-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.director-points li {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
+
+.director-points span {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border-radius: 12px;
+  background: #e0e7ff;
+  color: var(--blue);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.director-points strong {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--navy);
+  font-size: 17px;
+}
+
+.director-points p {
+  margin: 0;
+  color: #475569;
+  font-size: 15px;
 }
 
 .director-photo {
@@ -485,52 +565,7 @@ h3 {
   font-size: 17px;
 }
 
-.director-more {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 22px;
-  padding-bottom: 2px;
-  border-bottom: 2px solid #c7d2fe;
-  color: var(--blue);
-  font-weight: 900;
-}
-
-.director-more:hover {
-  border-color: #fed7aa;
-  color: var(--gold-dark);
-}
-
-/* 영상(쇼츠) 섹션 */
-.story-section {
-  max-width: none;
-  padding-left: max(22px, calc((100vw - 1180px) / 2));
-  padding-right: max(22px, calc((100vw - 1180px) / 2));
-  background: var(--pale);
-}
-
-.story-head {
-  max-width: 720px;
-  margin-bottom: 38px;
-}
-
-.story-head h2 {
-  margin-bottom: 12px;
-}
-
-.story-head p {
-  margin: 0;
-  color: #475569;
-  font-size: 17px;
-}
-
-.story-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
-  gap: clamp(28px, 4.5vw, 60px);
-  align-items: start;
-}
-
+/* 영상(쇼츠) 카드: 원장 소개 안에서 사진·소개 글과 나란히 놓입니다. */
 .video-card {
   margin: 0;
   padding: 14px;
@@ -575,67 +610,16 @@ h3 {
   font-weight: 700;
 }
 
-.story-copy {
+.video-actions {
   display: grid;
-  gap: 22px;
+  gap: 8px;
+  padding: 10px 4px 2px;
 }
 
-.story-quote {
-  margin: 0;
-  padding: 22px 24px;
-  border-left: 5px solid var(--blue);
-  border-radius: 14px;
-  background: var(--white);
-  color: var(--navy);
-  font-size: 20px;
-  font-weight: 800;
-  line-height: 1.6;
-}
-
-.story-points {
-  display: grid;
-  gap: 16px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.story-points li {
-  display: grid;
-  grid-template-columns: 44px 1fr;
-  gap: 14px;
-  align-items: start;
-}
-
-.story-points span {
-  display: grid;
-  width: 40px;
-  height: 40px;
-  place-items: center;
-  border-radius: 12px;
-  background: #e0e7ff;
-  color: var(--blue);
+.video-actions .button {
+  min-height: 42px;
+  padding: 0 12px;
   font-size: 14px;
-  font-weight: 900;
-}
-
-.story-points strong {
-  display: block;
-  margin-bottom: 2px;
-  color: var(--navy);
-  font-size: 17px;
-}
-
-.story-points p {
-  margin: 0;
-  color: #475569;
-  font-size: 15px;
-}
-
-.story-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
 }
 
 .check-list {
@@ -801,6 +785,19 @@ details p {
   margin: 0;
 }
 
+.contact-info dd a {
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: #c7d2fe;
+  text-underline-offset: 3px;
+}
+
+.contact-info dd a:hover {
+  color: var(--gold-dark);
+  text-decoration-color: #fed7aa;
+}
+
 .channel-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -877,6 +874,54 @@ details p {
   margin: 0;
   color: var(--muted);
   font-size: 14px;
+}
+
+.contact-form .form-honey {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.contact-form button:disabled {
+  opacity: 0.7;
+  cursor: progress;
+  transform: none;
+  box-shadow: none;
+}
+
+.form-status {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.55;
+}
+
+.form-status[hidden] {
+  display: none;
+}
+
+.form-status[data-state="pending"] {
+  color: var(--blue);
+  background: #eef2ff;
+}
+
+.form-status[data-state="success"] {
+  color: #065f46;
+  background: #ecfdf5;
+}
+
+.form-status[data-state="error"] {
+  color: #9a3412;
+  background: #fff7ed;
+}
+
+.form-status a {
+  color: inherit;
+  text-decoration: underline;
 }
 
 .footer {
@@ -957,7 +1002,6 @@ details p {
 
   .hero,
   .split-section,
-  .director-section,
   .contact-section,
   .trust-panel {
     grid-template-columns: 1fr;
@@ -973,20 +1017,6 @@ details p {
     margin: 0 auto;
   }
 
-  .story-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .video-card {
-    max-width: 330px;
-    margin: 0 auto;
-  }
-
-  .story-head {
-    margin-bottom: 28px;
-  }
-
   .concern-grid,
   .steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -997,12 +1027,31 @@ details p {
   }
 }
 
+/* 쇼츠까지 함께 놓기에는 좁아지는 폭에서는 사진·영상 두 칸, 소개 글은 아래로 내립니다. */
+@media (max-width: 1080px) {
+  .director-section {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas:
+      "photo video"
+      "copy copy"
+      "voice voice";
+  }
+
+  .director-media {
+    max-width: 440px;
+  }
+
+  .director-section .video-card {
+    justify-self: center;
+    width: min(100%, 320px);
+  }
+}
+
 @media (max-width: 640px) {
   .section,
   .section-band,
   .director-section,
-  .system-section,
-  .story-section {
+  .system-section {
     padding: 58px 18px;
   }
 
@@ -1010,12 +1059,34 @@ details p {
     grid-template-columns: 1fr;
   }
 
-  .story-quote {
+  .director-section {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "photo"
+      "copy"
+      "video"
+      "voice";
+  }
+
+  .director-media {
+    max-width: none;
+  }
+
+  .director-section .video-card {
+    width: min(100%, 300px);
+    justify-self: center;
+  }
+
+  .director-voice-quote {
     padding: 18px 20px;
     font-size: 17px;
   }
 
-  .story-points li {
+  .director-points {
+    grid-template-columns: 1fr;
+  }
+
+  .director-points li {
     grid-template-columns: 38px 1fr;
     gap: 12px;
   }

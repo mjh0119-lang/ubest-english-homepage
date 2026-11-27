@@ -321,6 +321,10 @@ h3 {
   letter-spacing: -0.01em;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .hero-caption-line {
   color: var(--muted);
   font-size: 14px;
@@ -448,7 +452,7 @@ h3 {
 
 .director-photo {
   margin: 0;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 20px;
@@ -524,7 +528,7 @@ h3 {
   display: grid;
   grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
   gap: clamp(28px, 4.5vw, 60px);
-  align-items: center;
+  align-items: start;
 }
 
 .video-card {
@@ -1004,7 +1008,7 @@ details p {
   }
 
   .director-photo {
-    aspect-ratio: 4 / 4.3;
+    aspect-ratio: 4 / 4.6;
   }
 
   .site-header {
